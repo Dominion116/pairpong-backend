@@ -5,9 +5,9 @@ const options: swaggerJsdoc.Options = {
   definition: {
     openapi: '3.0.0',
     info: {
-      title: 'Your API Title',
+      title: 'PairPong API',
       version: '1.0.0',
-      description: 'Your API description',
+      description: 'API Documentation for PairPong',
     },
     servers: [
       {
