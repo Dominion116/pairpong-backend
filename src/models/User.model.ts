@@ -1,3 +1,32 @@
+
+/**
+ * @swagger
+ * components:
+ *   schemas:
+ *     User:
+ *       type: object
+ *       required:
+ *         - address
+ *       properties:
+ *         address:
+ *           type: string
+ *           description: The user's address
+ *         totalMatches:
+ *           type: number
+ *           description: The total number of matches played by the user
+ *         wins:
+ *           type: number
+ *           description: The total number of matches won by the user
+ *         losses:
+ *           type: number
+ *           description: The total number of matches lost by the user
+ *         totalWagered:
+ *           type: number
+ *           description: The total amount wagered by the user
+ *         totalWon:
+ *           type: number
+ *           description: The total amount won by the user
+ */
 // Schema: address, totalMatches, wins, losses, totalWagered, totalWon
 import { Schema, model } from 'mongoose';
 

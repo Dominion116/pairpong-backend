@@ -1,7 +1,10 @@
+
 // Express app setup, middleware, and routes
 import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
+import swaggerUi from 'swagger-ui-express';
+import { swaggerSpec } from './config/swagger';
 import { errorMiddleware } from './middleware/error.middleware';
 import matchRoutes from './routes/match.routes';
 import userRoutes from './routes/user.routes';
@@ -11,6 +14,9 @@ dotenv.config();
 const app = express();
 
 app.use(express.json());
+
+// Swagger UI
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 // Routes
 app.use('/api/matches', matchRoutes);
