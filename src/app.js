@@ -1,13 +1,11 @@
-
-// Express app setup, middleware, and routes
 const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const swaggerUi = require('swagger-ui-express');
 const { swaggerSpec } = require('./config/swagger');
 const { errorMiddleware } = require('./middleware/error.middleware');
-const matchRoutes = require('./routes/match.routes');
-const userRoutes = require('./routes/user.routes');
+const matchRoutes = require('./routes/match.routes.js');
+const userRoutes = require('./routes/user.routes.js');
 
 dotenv.config();
 
